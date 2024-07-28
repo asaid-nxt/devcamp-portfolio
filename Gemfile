@@ -30,6 +30,8 @@ gem 'friendly_id', '~> 5.5.0'
 
 gem 'byebug', '~> 11.1', '>= 11.1.3'
 
+gem 'solargraph', '~> 0.50.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
