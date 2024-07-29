@@ -26,11 +26,14 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+
 gem 'friendly_id', '~> 5.5.0'
 
 gem 'byebug', '~> 11.1', '>= 11.1.3'
 
 gem 'solargraph', '~> 0.50.0'
+
+gem 'devise', '~> 4.9', '>= 4.9.4'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
