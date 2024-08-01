@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/asaid-nxt/abdullah_view_tool
+  revision: a135913931f3f331ac9994ff20a11c83027183ed
+  specs:
+    abdullah_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -356,6 +362,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  abdullah_view_tool!
   bootsnap
   bootstrap (~> 5.3.3)
   dartsass-sprockets
