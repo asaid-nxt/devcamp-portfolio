@@ -209,6 +209,8 @@ GEM
     parser (3.3.4.0)
       ast (~> 2.4.1)
       racc
+    petergate (3.0.0)
+      activerecord (> 4.0.0)
     pg (1.5.6)
     popper_js (2.11.8)
     pry (0.14.2)
@@ -372,6 +374,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails
+  petergate (~> 3.0)
   pg (~> 1.1)
   pry-byebug (~> 3.10, >= 3.10.1)
   puma (>= 5.0)
