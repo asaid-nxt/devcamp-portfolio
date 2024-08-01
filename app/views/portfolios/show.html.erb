@@ -8,6 +8,6 @@
     <p><%= t.name %></p>
 <% end %>
 
-<%= link_to "Edit", edit_portfolio_path(@portfolio_item) %>
+<%= link_to "Edit", edit_portfolio_path(@portfolio_item) if logged_in?(:admin) %>
 
-<%= link_to "Destroy this portfolio", @portfolio_item, method: :delete %>
+<%= link_to "Destroy this portfolio", @portfolio_item, method: :delete if logged_in?(:admin) %>
