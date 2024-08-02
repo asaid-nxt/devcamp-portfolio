@@ -26,7 +26,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 56em;
 }
 
 
@@ -130,3 +130,10 @@ body {
   display: block !important;
 }
 
+/*
+ * Custom Css
+ */
+
+.my-card {
+  text-align: left;
+}
