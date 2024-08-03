@@ -3,7 +3,7 @@
     <div class="row flex-nowrap align-items-center">
       
       <div class="col-6 text-end">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Large</a>
+        <%= link_to "Blog", blogs_path, class: "blog-header-logo text-body-emphasis text-decoration-none #{active_class(blogs_path)}" %>
       </div>
       <div class="col-6 d-flex justify-content-end align-items-center">
         <%= login_helper "btn btn-sm btn-outline-secondary" %>

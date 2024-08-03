@@ -6,7 +6,9 @@ class BlogsController < ApplicationController
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
-    @page_title = 'My Portfolio Blog'
+    @main_feature_post = Blog.find(14)
+    @second_feature_post = Blog.find(13)
+    @third_feature_post = Blog.find(12)
   end
 
   # GET /blogs/1 or /blogs/1.json
@@ -59,7 +61,7 @@ class BlogsController < ApplicationController
 
   def toggle_status
     @blog.draft? ? @blog.published! : @blog.draft!
-    redirect_to blogs_url, notice: "Blog has been updated."
+    redirect_to blog_url(@blog), notice: "Blog has been updated."
   end
 
   private
