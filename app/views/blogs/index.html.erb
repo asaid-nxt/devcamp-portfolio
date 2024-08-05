@@ -1,68 +1,16 @@
 
- <!-- The start of feature blog posts -->
-  
-      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-      <div class="col-lg-6 px-0">
-        <h1 class="display-4 fst-italic"><%= @main_feature_post.title %></h1>
-        <p class="lead my-3"><%= @main_feature_post.body.split('.').first(2).join('.') + '.' %></p>
-        <p class="lead mb-0"><%= link_to 'Continue reading...', blog_path(@main_feature_post), class: "text-body-emphasis fw-bold" %></p>
-      </div>
-    </div>
+<div class="col-md-8">
+  <%= link_to "New Blog", new_blog_path if logged_in?(:admin) %>
+  <br><br>
+  <%= render @blogs %>
 
-    <div class="row mb-2">
-      <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-          <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0"><%= @second_feature_post.title %></h3>
-            <br>
-            <p class="card-text mb-auto"><%= @second_feature_post.body.split('.').first(1).join('.') + '.' %></p>
-              <%= link_to 'Continue reading...', blog_path(@second_feature_post), class: "icon-link gap-1 icon-link-hover stretched-link" %>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-          <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0"><%= @third_feature_post.title %></h3>
-            <br>
-            <p class="mb-auto"><%= @third_feature_post.body.split('.').first(1).join('.') + '.' %></p>
-            <%= link_to 'Continue reading...', blog_path(@third_feature_post), class: "icon-link gap-1 icon-link-hover stretched-link" %>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- pagination -->
+  <nav class="blog-pagination" aria-label="Pagination">
+    <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+    <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+  </nav>
+  <!-- pagination -->
 
-    <!-- The end of feature blog posts -->
+</div>
 
-
-
-    <!--  blog-post -->
-
-       
-
-      <div class="col-md-8">
-
-        <%= link_to "New blog", new_blog_path if logged_in?(:admin) %> 
-        
-        <%= render @blogs %>
-
-         <!-- pagination -->
-        <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav>
-      </div>
-
-       
-     
-
-
-<!-- <div id="blogs"> 
-</div> -->
 

@@ -1,14 +1,12 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status ]
+  before_action :feature_posts, only: %i[ show new edit index]
   access all: [:show, :index], admin: :all
   layout 'blog'
 
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
-    @main_feature_post = Blog.find(14)
-    @second_feature_post = Blog.find(13)
-    @third_feature_post = Blog.find(12)
   end
 
   # GET /blogs/1 or /blogs/1.json
@@ -75,4 +73,10 @@ class BlogsController < ApplicationController
   def blog_params
     params.require(:blog).permit(:title, :body)
   end
+end
+
+def feature_posts
+  @main_feature_post = Blog.find(14)
+  @second_feature_post = Blog.find(13)
+  @third_feature_post = Blog.find(12)
 end
