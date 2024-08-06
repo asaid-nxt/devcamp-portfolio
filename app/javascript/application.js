@@ -1,9 +1,12 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
-import "bootstrap"
-import Rails from "@rails/ujs"
-Rails.start()
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
+// Import necessary modules using ES module syntax
+import Rails from "@rails/ujs";
+import "jquery";
+import "jquery-ui";
+import "./html.sortable";
+import "portfolios";
+
+// Start Rails UJS
+Rails.start();
+import "@hotwired/turbo-rails";
+import "controllers";
+import "bootstrap";
