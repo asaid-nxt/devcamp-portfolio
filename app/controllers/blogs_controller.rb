@@ -76,7 +76,7 @@ class BlogsController < ApplicationController
 end
 
 def feature_posts
-  @main_feature_post = Blog.find(14)
-  @second_feature_post = Blog.find(13)
-  @third_feature_post = Blog.find(12)
+  @main_feature_post = Blog.find(1)
+  @second_feature_post = Blog.find(2)
+  @third_feature_post = Blog.find(3)
 end
