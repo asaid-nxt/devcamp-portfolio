@@ -42,7 +42,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem 'image_processing', '~> 1.13'
 
 
 group :development, :test do
@@ -73,3 +73,7 @@ gem 'petergate', '~> 3.0'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'coffee-rails', '~> 5.0'
+gem 'carrierwave', '~> 3.0', '>= 3.0.7'
+gem 'carrierwave-aws', '~> 1.6'
+gem 'mini_magick', '~> 4.9'
+gem 'dotenv-rails', '~> 3.1', '>= 3.1.2'
