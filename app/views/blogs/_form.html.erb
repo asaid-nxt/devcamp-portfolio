@@ -12,16 +12,15 @@
   <% end %>
 
   <div class="mb-3">
-    <%= form.label :title, style: "display: block", class: 'form-label' %>
-    <%= form.text_field :title, class: 'form-control w-75' %>
+    <%= form.text_field :title, class: 'form-control w-75', placeholder: 'Title' %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :body, style: "display: block", class: 'form-label' %>
-    <%= form.text_area :body, class: 'form-control w-75', rows:13 %>
+    <%= form.text_area :body, class: 'form-control w-75', rows:13, placeholder: 'Content' %>
   </div>
 
   <div class="mb-3">
     <%= form.submit 'Submit', class: 'btn btn-primary' %>
   </div>
-<% end %>
+<% end %> 
+
