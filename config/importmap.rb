@@ -18,5 +18,4 @@ pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.6/dist/esm
 
 # Pin Bootstrap
 pin "bootstrap", to: "https://ga.jspm.io/npm:bootstrap@5.3.3/dist/js/bootstrap.esm.js", preload: true
-
-# No direct equivalent for require_tree in Importmaps; import files manually
+pin "@nathanvda/cocoon", to: "@nathanvda--cocoon.js" # @1.2.14

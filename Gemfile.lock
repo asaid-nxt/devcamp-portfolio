@@ -124,6 +124,7 @@ GEM
     carrierwave-aws (1.6.0)
       aws-sdk-s3 (~> 1.0)
       carrierwave (>= 2.0, < 4)
+    cocoon (1.2.15)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 5.2.0)
@@ -432,6 +433,7 @@ DEPENDENCIES
   bootstrap (~> 5.3.3)
   carrierwave (~> 3.0, >= 3.0.7)
   carrierwave-aws (~> 1.6)
+  cocoon (~> 1.2, >= 1.2.15)
   coffee-rails (~> 5.0)
   dartsass-sprockets
   debug
