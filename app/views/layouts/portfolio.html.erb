@@ -19,6 +19,9 @@
     <main>
 
       <%= render 'shared/portfolio_masthead' unless logged_in?(:admin) %>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       
       <%= yield %>
 

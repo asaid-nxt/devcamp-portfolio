@@ -28,8 +28,12 @@
         <%= render 'shared/application_nav'%>
       </header>
 
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
       <%= yield %>
       <%= render 'shared/application_footer' %>
+
       <%= source_helper %>
     </div>
   </body> 
