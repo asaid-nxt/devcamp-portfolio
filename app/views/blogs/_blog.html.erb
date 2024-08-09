@@ -1,6 +1,6 @@
 <article class="blog-post">
   <h2 class="display-5 link-body-emphasis mb-1"><%= link_to blog.title, blog %></h2>
-  <p style="font-size:23px;"><%= blog.topic.title %></p>
+  <p style="font-size:20px;"><%= blog.topic.title %></p>
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
   <p>
   <% if logged_in?(:admin) %>

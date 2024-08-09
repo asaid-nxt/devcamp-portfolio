@@ -1,0 +1,8 @@
+<div class="p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+  <div class="col-lg-6 px-0">
+    <h1 class="display-4 fst-italic">My Blog</h1>
+    <p class="lead my-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+  </div>
+    <%= link_to "Write a New Blog", new_blog_path if logged_in?(:admin) %>
+    <p><%= link_to 'Topics', topics_path %></p>
+</div>
