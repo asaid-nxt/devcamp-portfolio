@@ -20,18 +20,17 @@
   <main class="container">
     <div class="row g-5">
          
-      <%= render 'shared/blog_feature_posts' %>    
+    <%= render 'shared/blog_masthead' %> 
+  
+     
+    <%= yield %>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      
-      <%= yield %>
+    <%= render 'shared/blog_sidebar' %>
 
+    <%= source_helper %>
 
-      <%= render 'shared/blog_sidebar' %>
-      <%= source_helper %>
+    <%= render 'shared/blog_footer' %>
 
-      <%= render 'shared/blog_footer' %>
     </div>
   </main>    
 </body>
