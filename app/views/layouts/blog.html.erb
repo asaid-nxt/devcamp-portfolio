@@ -9,6 +9,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= favicon_link_tag "favicons/favicon.ico" %>
     <%= stylesheet_link_tag "blogs", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -28,7 +29,6 @@
 
       <%= render 'shared/blog_sidebar' %>
 
-      <%= source_helper %>
 
       <%= render 'shared/blog_footer' %>
 

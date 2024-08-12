@@ -8,6 +8,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= favicon_link_tag "favicons/favicon.ico" %>
     <%= stylesheet_link_tag "portfolios", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -25,7 +26,6 @@
       
       <%= yield %>
 
-      <%= source_helper %>
     
     </main>
 
