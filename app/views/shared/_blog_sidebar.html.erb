@@ -7,41 +7,12 @@
         </p>
       </div>
 
-      <div>
-        <h4 class="fst-italic">Recent posts</h4>
-        <ul class="list-unstyled">
-          <li>
-            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-              <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-              <div class="col-lg-8">
-                <h6 class="mb-0"><%= @main_feature_post.title %></h6>
-                <small class="text-body-secondary">
-                  Published <%= distance_of_time_in_words(@main_feature_post.created_at, Time.now) %> ago
-                </small>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-              <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-              <div class="col-lg-8">
-                <h6 class="mb-0"><%= @second_feature_post.title %></h6>
-                <small class="text-body-secondary">Published <%= distance_of_time_in_words(@second_feature_post.created_at, Time.now) %> ago</small>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-              <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-              <div class="col-lg-8">
-                <h6 class="mb-0"><%= @third_feature_post.title %></h6>
-                <small class="text-body-secondary">Published <%= distance_of_time_in_words(@third_feature_post.created_at, Time.now) %> ago</small>
-              </div>
-            </a>
-          </li>
-        </ul>
+      <div class="p-4 mb-3 bg-body-tertiary rounded">
+        <h4>Topics</h4>
+        <% @sidebar_topics.each do |topic| %>
+          <p><%= link_to topic.title, topic_path(topic) %></p>
+        <% end %>
       </div>
-
 
       <div class="p-4">
         <h4 class="fst-italic">Elsewhere</h4>

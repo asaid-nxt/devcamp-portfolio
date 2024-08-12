@@ -1,12 +1,52 @@
-<h1>About Me</h1>
-<br>
-<div class="row">
-  <div class="col-md-4 mr-4">
-    <%= image_tag "profile.jpg", width: 280, alt: 'profile image' %>
-  </div>
+<div class="card p-5 text-start">
+  <h1>About Me</h1>
+  <br>
+  <div class="row">
+    <div class="col-md-4 mr-4">
+      <%= image_tag "profile.jpg", width: 280, alt: 'profile image' %>
+    </div>
 
-  <div class="col-md-8">
-    <p class="lead">As a passionate software engineer, I thrive on turning complex problems into elegant solutions. With a background in computer science and years of hands-on experience, I've honed my skills in various programming languages and frameworks.</p><p class="lead"> My journey has taken me from developing intuitive user interfaces to designing robust backend systems, always with a focus on quality and performance. I enjoy working on projects that challenge me to think critically and push the boundaries of technology. Beyond coding, I love collaborating with diverse teams to bring innovative ideas to life. </p>
+    <div class="col-md-8">
+      <p class="lead">As a passionate software engineer, I thrive on turning complex problems into elegant solutions. With a background in computer science and years of hands-on experience, I've honed my skills in various programming languages and frameworks.</p><p class="lead"> My journey has taken me from developing intuitive user interfaces to designing robust backend systems, always with a focus on quality and performance. I enjoy working on projects that challenge me to think critically and push the boundaries of technology. Beyond coding, I love collaborating with diverse teams to bring innovative ideas to life. </p>
+    </div>
+
+    <div class="container mt-4">
+      <!-- Button to trigger collapse -->
+      <button class="btn btn-secondary mb-3" style="margin-right: 10px;" type="button" data-bs-toggle="collapse" data-bs-target="#skills" aria-expanded="false" aria-controls="skills">
+        My Programming Languages
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse mb-4" id="skills">
+        <div class="card card-body d-inline-block">
+          Ruby
+        </div>
+        <div class="card card-body d-inline-block">
+          Ruby on Rails
+        </div>
+        <div class="card card-body d-inline-block">
+          Python
+        </div>
+        <div class="card card-body d-inline-block">
+          HTML
+        </div>
+        <div class="card card-body d-inline-block">
+          CSS
+        </div>
+      </div>
+
+      <button class="btn btn-secondary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#education" aria-expanded="false" aria-controls="education">
+        My Education
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse" id="education">
+        <div class="card card-body d-inline-block">
+          Bachelor's degree in Information Systems
+        </div>   
+      </div>
+    </div>
+
   </div>
 </div>
 

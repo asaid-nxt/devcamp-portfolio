@@ -1,18 +1,26 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status ]
-  before_action :feature_posts, only: %i[ show new edit index]
+  before_action :set_sidebar_topics, except: [:destroy, :create, :update, :toggle_status]
   access all: [:show, :index], admin: :all
   layout 'blog'
 
   # GET /blogs or /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    if logged_in?(:admin)
+      @blogs = Blog.recent.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.recent.page(params[:page]).per(5)
+    end
   end
 
   # GET /blogs/1 or /blogs/1.json
   def show
-    @page_title = @blog.title
-    @seo_keywords = @blog.body
+    if logged_in?(:admin) || @blog.published?
+      @page_title = @blog.title
+      @seo_keywords = @blog.body
+    else
+      redirect_to blogs_path, notice: 'You are not authorized to access this page'
+    end
   end
 
   # GET /blogs/new
@@ -59,7 +67,7 @@ class BlogsController < ApplicationController
 
   def toggle_status
     @blog.draft? ? @blog.published! : @blog.draft!
-    redirect_to blog_url(@blog), notice: "Blog has been updated."
+    redirect_to blogs_url(@blog), notice: "Blog has been updated."
   end
 
   private
@@ -71,12 +79,11 @@ class BlogsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :topic_id, :status)
   end
-end
 
-def feature_posts
-  @main_feature_post = Blog.find(1)
-  @second_feature_post = Blog.find(2)
-  @third_feature_post = Blog.find(3)
+  def set_sidebar_topics
+    @sidebar_topics = Topic.with_blogs
+  end
+
 end

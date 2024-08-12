@@ -16,6 +16,19 @@
   </div>
 
   <div class="mb-3">
+    <%= form.label :topic_id %>
+    <%= form.collection_select(:topic_id, Topic.all, :id, :title, { selected: blog.topic.id, include_black: true }, class:'form-control w-75') %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.radio_button :status, 'draft' %>
+    <%= form.label :status, 'Draft' %>
+
+    <%= form.radio_button :status, 'published' %>
+    <%= form.label :status, 'Published' %>
+  </div>
+
+  <div class="mb-3">
     <%= form.text_area :body, class: 'form-control w-75', rows:13, placeholder: 'Content' %>
   </div>
 
