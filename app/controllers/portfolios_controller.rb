@@ -57,7 +57,6 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: "Portfolio was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
